@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
+import CompanionSelect from "./components/CompanionSelect";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
@@ -14,7 +15,7 @@ function App() {
       <Navbar home = {home}/>
       <Routes>
         <Route path = "/"
-        element = {<Home />} />
+        element = {<CompanionSelect />} />
       </Routes>
       </Router>
     </>

@@ -1,10 +1,10 @@
-.home-background {
+.companion-home-background {
     background-color: #040228;
     width: 100vw;
     height: 100vw;
 }
 
-.home-odyssey {
+.companion-home-odyssey {
     color: #FC9E4F;
     display: flex;
     justify-content: center;
@@ -12,12 +12,12 @@
     font-weight: 500;
 }
 
-.home-banner {
+.companion-home-banner {
     color: #C4C4C4;
     padding-left: 145px;
     
 }
 
-.move-headline {
+.move-banner {
     padding-top: 100px
 }

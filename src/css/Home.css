@@ -1,0 +1,23 @@
+.home-background {
+    background-color: #040228;
+    width: 100vw;
+    height: 100vw;
+}
+
+.home-odyssey {
+    color: #FC9E4F;
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+    font-weight: 500;
+}
+
+.home-banner {
+    color: #C4C4C4;
+    padding-left: 145px;
+    
+}
+
+.move-headline {
+    padding-top: 100px
+}

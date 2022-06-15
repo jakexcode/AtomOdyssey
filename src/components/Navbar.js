@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom"
+import "../css/Navbar.css"
 
 export default function Navbar({home}) {
   return (
@@ -7,21 +8,20 @@ export default function Navbar({home}) {
       <nav
         className={
           home
-            ? "navbar navbar-light navbar-expand-lg bg-light sticky-top"
-            : "navbar navbar-light navbar-expand-lg sticky-top bg-light"
+            ? "navbar navbar-expand-lg sticky-top main-nav"
+            : "navbar navbar-expand-lg sticky-top main-nav"
         }
       >
         <div className="container-fluid">
-          {/* <Link className="navbar-brand" to="/">
-            <span className="text-uppercase fw-light title">Buy</span>
+          <Link className="navbar-brand" to="/">
             <img
               className="main-logo inline-block"
-              src="/images/logo.png"
+              src="/images/AtomOdyssey_LOGO.png"
               alt="main-logo"
-              height="60"
+              height="100"
             />{" "}
-            <span className="text-uppercase fw-light title">Postage</span>
-          </Link> */}
+            <span className="title">AtomOdyssey</span>
+          </Link>
 
           <button
             className="navbar-toggler"
@@ -32,30 +32,41 @@ export default function Navbar({home}) {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"><span class="material-symbols-outlined">
+menu
+</span></span>
           </button>
 
           <div
-            className="collapse navbar-collapse justify-content-end"
+            className="collapse navbar-collapse"
             id="navbarSupportedContent"
           >
-            <div className="navbar-nav justify-content-end mb-2 mb-lg-0">
-              <div className="nav-item nav-item-text">
+            <div className="navbar-nav">
+              <div className="nav-item nav-item-text mt-3">
                 <Link
                   to="/"
                   id="home-nav-link"
                   className="nav-link text-center"
                 >
-                  <strong>Home</strong>
+                  <strong>Projects</strong>
                 </Link>
               </div>
-              <div className="nav-item nav-item-text">
+              <div className="nav-item nav-item-text mt-3">
                 <Link
                   to="/about"
                   id="home-nav-link"
                   className="nav-link text-center"
                 >
                   <strong>About</strong>
+                </Link>
+              </div>
+              <div className="nav-item nav-item-text mt-3">
+                <Link
+                  to="/contact"
+                  id="home-nav-link"
+                  className="nav-link text-center"
+                >
+                  <strong>Contact</strong>
                 </Link>
               </div>
             </div>

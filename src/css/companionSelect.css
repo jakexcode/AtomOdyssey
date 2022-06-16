@@ -6,8 +6,6 @@
 
 .companion-home-odyssey {
     color: #FC9E4F;
-    display: flex;
-    justify-content: center;
     font-size: 100px;
     font-weight: 500;
     letter-spacing: 5px;
@@ -32,17 +30,17 @@
     color: #619B8A;
     font-weight: bold;
     letter-spacing: 5px;
-    margin-top: 80px;
-    padding-right: 100px;
+    margin-top: 100px;
 }
 
 .companion-home-lower-text {
     color: #C4C4C4;
     letter-spacing: 2px;
+    padding-top: 50px;
+
 }
 
 .companion-select-container {
-    padding-left: 200px;
     padding-top: 50px;
 }
 

@@ -27,11 +27,11 @@ export default function CompanionSelect(setCurrentStage) {
           </div>
           <h1 className="companion-home-banner mb-5 ms-5 display-1">
             Designing a Website is an<br/></h1>
-           <h1 className = "companion-home-odyssey">Odyssey</h1> 
+           <h1 className = "companion-home-odyssey text-center">Odyssey</h1> 
         </div>
         <section className = "companion-select-container">
-        <h3 className="companion-home-consult">Ready To Start Your Project <span className = "special-text">Odyssey?</span></h3>
-        <h5 className="companion-home-lower-text mt-5 mb-5">Find Your <span className = "special-text">Companion</span></h5>
+        <h3 className="companion-home-consult text-center">Ready To Start Yours?</h3>
+          <h5 className="companion-home-lower-text mb-5 text-center">Type Something Below To Find Your <span className = "special-text">Companion</span></h5>
         <div className="d-flex justify-content-center">
         <input
         className="col-sm-4 text-center"

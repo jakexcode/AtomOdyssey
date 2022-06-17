@@ -13,19 +13,20 @@ import "bootstrap";
 function App() {
 
   const [currentStage, setCurrentStage] = useState(0)
+  const [companion, setCompanion] = useState("")
 
   const [home, setHome] = useState(window.location.pathname === "/")
   return (
     <>
     <Router>
-      <Navbar setCurrentStage = {setCurrentStage}home = {home}/>
+      <Navbar setCurrentStage = {setCurrentStage} home = {home}/>
       <Routes>
         {/* <Route path = "/" 
         element = {<Home />} /> */}
        <Route path = "/" 
-       element = {<CompanionSelect /> }/>
+       element = {<CompanionSelect setCurrentStage = {setCurrentStage} companion = {companion} setCompanion = {setCompanion} /> }/>
         <Route path = "/odyssey"
-        element = {<Odyssey currentStage = {currentStage} setCurrentStage = {setCurrentStage}/>} />
+        element = {<Odyssey companion = {companion} setCompanion = {setCompanion} currentStage = {currentStage} setCurrentStage = {setCurrentStage}/>} />
       </Routes>
       </Router>
     </>

@@ -1,14 +1,18 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import axios from "axios"
 import "../css/CompanionSelect.css"
 import { useNavigate } from 'react-router-dom';
 
 
-export default function CompanionSelect({currentStage, setCurrentStage}) {
+export default function CompanionSelect({companion, setCompanion, currentStage, setCurrentStage}) {
 
   const navigate = useNavigate();
   
-  const [companion, setCompanion] = useState("")
+
+  useEffect(() => {
+    setCurrentStage(0)
+  }, [])
+  
   const [companionText, setCompanionText] = useState ("");
 
   const handleChange = (e) => {

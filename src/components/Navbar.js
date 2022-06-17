@@ -1,12 +1,10 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom"
 import "../css/Navbar.css"
 
 export default function Navbar({home, setCurrentStage}) {
 
-  const resetHome = () => {
-    setCurrentStage(0)
-  }
+  
   return (
     <>
       <nav

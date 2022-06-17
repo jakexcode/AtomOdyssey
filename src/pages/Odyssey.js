@@ -5,9 +5,8 @@ import Consultation from '../components/Consultation'
 import ProjectSelect from '../components/ProjectSelect'
 
 
-export default function Odyssey() {
+export default function Odyssey({currentStage, setCurrentStage}) {
 
-  const [currentStage, setCurrentStage] = useState(0)
   const [voyage, setVoyage] = useState("")
 
   

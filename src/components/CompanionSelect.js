@@ -4,7 +4,7 @@ import "../css/CompanionSelect.css"
 import { useNavigate } from 'react-router-dom';
 
 
-export default function CompanionSelect({companion, setCompanion, currentStage, setCurrentStage}) {
+export default function CompanionSelect({companion, setCompanion, currentStage, setCurrentStage, companionText, setCompanionText}) {
 
   const navigate = useNavigate();
   
@@ -13,15 +13,16 @@ export default function CompanionSelect({companion, setCompanion, currentStage, 
     setCurrentStage(0)
   }, [])
   
-  const [companionText, setCompanionText] = useState ("");
+  
 
   const handleChange = (e) => {
     setCompanionText(e.target.value)
   }
 
   const getStarted = () => {
-    setCompanion(companionText)
+    setCompanion(`https://robohash.org/${companionText}`)
     navigate("/odyssey")
+    console.log(companion)
   }
 
 

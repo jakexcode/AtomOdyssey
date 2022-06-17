@@ -14,6 +14,7 @@ function App() {
 
   const [currentStage, setCurrentStage] = useState(0)
   const [companion, setCompanion] = useState("")
+  const [companionText, setCompanionText] = useState ("")
 
   const [home, setHome] = useState(window.location.pathname === "/")
   return (
@@ -24,9 +25,9 @@ function App() {
         {/* <Route path = "/" 
         element = {<Home />} /> */}
        <Route path = "/" 
-       element = {<CompanionSelect setCurrentStage = {setCurrentStage} companion = {companion} setCompanion = {setCompanion} /> }/>
+       element = {<CompanionSelect companionText = {companionText} setCompanionText = {setCompanionText} setCurrentStage = {setCurrentStage} companion = {companion} setCompanion = {setCompanion} /> }/>
         <Route path = "/odyssey"
-        element = {<Odyssey companion = {companion} setCompanion = {setCompanion} currentStage = {currentStage} setCurrentStage = {setCurrentStage}/>} />
+        element = {<Odyssey companion = {companion} setCompanion = {setCompanion} companionText = {companionText} currentStage = {currentStage} setCurrentStage = {setCurrentStage}/>} />
       </Routes>
       </Router>
     </>

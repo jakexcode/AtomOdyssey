@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { Navigate } from "react-router-dom";
 import "../css/VesselSelect.css";
 
-export default function VesselSelect({ companionText, voyage, setVoyage, setCurrentStage }) {
+export default function VesselSelect({companion, voyage, setVoyage, setCurrentStage, companionText}) {
 
   
 

@@ -5,7 +5,7 @@ import Consultation from '../components/Consultation'
 import ProjectSelect from '../components/ProjectSelect'
 
 
-export default function Odyssey({currentStage, setCurrentStage}) {
+export default function Odyssey({currentStage, setCurrentStage, companionText}) {
 
   const [voyage, setVoyage] = useState("")
 
@@ -21,7 +21,7 @@ export default function Odyssey({currentStage, setCurrentStage}) {
     switch(currentStage) {
       case 0: 
         return (
-          <VesselSelect voyage = {voyage} setVoyage = {setVoyage} currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
+          <VesselSelect companionText={companionText} voyage = {voyage} setVoyage = {setVoyage} currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
         )
         case 1: 
         return (

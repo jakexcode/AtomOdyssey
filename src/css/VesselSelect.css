@@ -1,0 +1,185 @@
+
+
+
+.companion-home-background {
+    background-color: #040228;
+    width: 100vw;
+    height: 100vw;
+}
+
+.companion-home-odyssey {
+    color: #FC9E4F;
+    font-size: 100px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+.companion-home-banner {
+    color: #C4C4C4;
+    padding-left: 145px;
+    letter-spacing: 5px;
+    
+}
+
+.move-banner {
+    padding-top: 100px
+}
+
+.special-text {
+    color:#FC9E4F;
+}
+
+.companion-home-consult {
+    color: #619B8A;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-top: 100px;
+}
+
+.companion-home-lower-text {
+    color: #C4C4C4;
+    letter-spacing: 2px;
+    padding-top: 50px;
+
+}
+
+.companion-select-container {
+    padding-top: 50px;
+}
+
+.btn-companion { 
+    background-color: #619B8A;
+   
+    border: none;
+    border-radius: 4px;
+    color: white;
+  }
+  
+  .btn-companion:hover {
+    background-color:#2c6e5a
+  }
+
+  .robot-position {
+    padding-left: 1200px;
+    
+  }
+
+  .photo-grid {
+	margin: 1em auto;
+	max-width: 1106px;
+	text-align: center;
+    cursor: pointer;
+}
+
+.photo-grid li {
+	
+	display: inline-block;
+	margin: 1em;
+	width: 300px;
+}
+
+.photo-grid img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+.photo-grid figure {
+	height: 300px;
+    border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+	width: 300px;
+}
+
+.photo-grid figcaption {
+	background: rgba(0,0,0,0.8);
+	color: #ffffff;
+	display: table;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 100;
+}
+
+.photo-grid figcaption p {
+	display: table-cell;
+	font-size: 1.5em;
+	position: relative;
+	top: -40px;
+	width: 300px;
+	vertical-align: middle;
+}
+
+.photo-grid li:hover figcaption {
+	opacity: 1;
+}
+
+
+.photo-grid img {
+	display: block;
+	height: auto;
+    
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	transition: all 300ms;
+	max-width: 100%;
+}
+
+.photo-grid li:hover img {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.photo-grid figcaption p {
+	display: table-cell;
+    
+	font-size: 1.5em;
+	position: relative;
+	top: -40px;
+	width: 300px;
+	-webkit-transition: all 300ms ease-out;
+	-moz-transition: all 300ms ease-out;
+	transition: all 300ms ease-out;
+	vertical-align: middle;
+}
+
+.photo-grid li:hover figcaption p {
+	-moz-transform: translateY(40px);
+	-webkit-transform: translateY(40px);
+	transform: translateY(40px);
+}
+
+
+.photo-grid figcaption {
+	background: rgba(4,2,40,0.8);
+	color: #2c6e5a;
+    border-radius: 50%;
+	display: table;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	transition: all 300ms;
+	-webkit-transition-delay: 100ms;
+	-moz-transition-delay: 100ms;
+	transition-delay: 100ms;
+	z-index: 100;
+}
+
+.img-button {
+    background-color: #040228;
+    border: none;
+    border-radius: 50%;
+}
+
+
+  

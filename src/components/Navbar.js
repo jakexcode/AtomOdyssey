@@ -2,7 +2,11 @@ import React, {useState} from "react";
 import {Link} from "react-router-dom"
 import "../css/Navbar.css"
 
-export default function Navbar({home}) {
+export default function Navbar({home, setCurrentStage}) {
+
+  const resetHome = () => {
+    setCurrentStage(0)
+  }
   return (
     <>
       <nav
@@ -15,6 +19,7 @@ export default function Navbar({home}) {
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <img
+            
               className="main-logo inline-block"
               src="/images/AtomOdyssey_LOGO.png"
               alt="main-logo"
@@ -32,7 +37,7 @@ export default function Navbar({home}) {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"><span class="material-symbols-outlined">
+            <span className="navbar-toggler-icon"><span className="material-symbols-outlined">
 menu
 </span></span>
           </button>

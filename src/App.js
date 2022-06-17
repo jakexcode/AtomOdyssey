@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Home from "./pages/Home";
+import Odyssey from "./pages/Odyssey";
+// import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import CompanionSelect from "./components/CompanionSelect";
 import VesselSelect from "./components/VesselSelect"
@@ -17,18 +18,14 @@ function App() {
   return (
     <>
     <Router>
-      <Navbar home = {home}/>
+      <Navbar setCurrentStage = {setCurrentStage}home = {home}/>
       <Routes>
-        <Route path = "/"
-        element = {<CompanionSelect currentStage = {currentStage} setCurrentStage = {setCurrentStage}/>} />
-        <Route path = "/"
-        element = {<Home currentStage = {currentStage} setCurrentStage = {setCurrentStage}/>} />
-        <Route path = "/"
-        element = {<VesselSelect currentStage = {currentStage} setCurrentStage = {setCurrentStage} />} />
-        <Route path = "/"
-        element = {<ProjectSelect currentStage = {currentStage} setCurrentStage = {setCurrentStage} />} />
-        <Route path = "/"
-        element = {<Consultation currentStage = {currentStage} setCurrentStage = {setCurrentStage} />} />
+        {/* <Route path = "/" 
+        element = {<Home />} /> */}
+       <Route path = "/" 
+       element = {<CompanionSelect /> }/>
+        <Route path = "/odyssey"
+        element = {<Odyssey currentStage = {currentStage} setCurrentStage = {setCurrentStage}/>} />
       </Routes>
       </Router>
     </>

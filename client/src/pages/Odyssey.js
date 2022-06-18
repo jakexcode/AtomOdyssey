@@ -38,7 +38,6 @@ export default function Odyssey({currentStage, setCurrentStage, companionText}) 
   return (
     <>
     {renderHome()}
-    <ProjectSection />
     </>
   )
 }

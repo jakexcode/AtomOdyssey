@@ -4,10 +4,10 @@ import "../css/Home.css"
 import { useNavigate } from 'react-router-dom';
 
 
-export default function Home() {
+export default function Home({setCurrentStage}) {
 
 
- 
+  
 
   const navigate = useNavigate();
 

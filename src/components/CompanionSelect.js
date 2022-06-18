@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import axios from "axios"
-import "../css/CompanionSelect.css"
+import "../css/companionSelect.css"
 import { useNavigate } from 'react-router-dom';
+import ProjectSection from '../pages/ProjectSection';
 
 
 export default function CompanionSelect({companion, setCompanion, currentStage, setCurrentStage, companionText, setCompanionText}) {
@@ -30,8 +31,7 @@ export default function CompanionSelect({companion, setCompanion, currentStage, 
     <>
       <div className = "companion-home-background">
         <div className = "jumbo">
-          <div className = "move-banner">
-          </div>
+          <div className = "move-banner"></div>
           <h1 className="companion-home-banner mb-5 ms-5 display-1">
             Designing a Website is an</h1>
            <h1 className = "companion-home-odyssey text-center">Odyssey</h1> 
@@ -64,13 +64,15 @@ export default function CompanionSelect({companion, setCompanion, currentStage, 
                     />
                   </div>
                   <div className="d-flex justify-content-center">
-                  <button className = "btn-companion mt-4 btn-lg" onClick={getStarted}>Start</button>
+                  <button className = "btn-companion mt-5 btn-lg" onClick={getStarted}>Start</button>
            </div>
         </div>): []}
 
         </div>
         </section>
+        <ProjectSection />
       </div>
+      
     </>
   )
 }

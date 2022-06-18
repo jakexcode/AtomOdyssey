@@ -1,0 +1,35 @@
+.project-section-bottom-background {
+    background-color: #2c6e5a;
+    width: 100vw;
+    height: 100vw;
+}
+
+.project-section-top-background {
+    background-color: #040228;
+    width: 100vw;
+    height: 50vw;
+    
+}
+
+.featured-project-text {
+    padding-top: 400px;
+    color: #FC9E4F;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    padding-left: 250px;
+}
+.featured-text {
+    padding-top: 25px;
+    color: #c4c4c4;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 8px;
+    padding-left: 250px;
+}
+
+.videos-container {
+    padding-left: 600px;
+  }
+
+  

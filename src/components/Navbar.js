@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom"
-import "../css/Navbar.css"
+import "../css/navbar.css"
 
 export default function Navbar({home, setCurrentStage}) {
 
-  
+ 
   return (
     <>
       <nav
@@ -47,7 +47,7 @@ menu
             <div className="navbar-nav">
               <div className="nav-item nav-item-text mt-3">
                 <Link
-                  to="/"
+                  to="/projects"
                   id="home-nav-link"
                   className="nav-link text-center"
                 >

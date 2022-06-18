@@ -7,6 +7,7 @@ import CompanionSelect from "./components/CompanionSelect";
 import VesselSelect from "./components/VesselSelect"
 import ProjectSelect from "./components/ProjectSelect"
 import Consultation from "./components/Consultation"
+import ProjectSection from "./pages/ProjectSection";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 

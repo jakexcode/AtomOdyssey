@@ -3,11 +3,13 @@ import CompanionSelect from '../components/CompanionSelect'
 import VesselSelect from '../components/VesselSelect'
 import Consultation from '../components/Consultation'
 import ProjectSelect from '../components/ProjectSelect'
+import ProjectSection from './ProjectSection'
 
 
 export default function Odyssey({currentStage, setCurrentStage, companionText}) {
 
   const [voyage, setVoyage] = useState("")
+  const [projectType, setProjectType] = useState("");
 
   
 
@@ -25,7 +27,7 @@ export default function Odyssey({currentStage, setCurrentStage, companionText}) 
         )
         case 1: 
         return (
-          <ProjectSelect voyage = {voyage} setVoyage = {setVoyage} currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
+          <ProjectSelect projectType = {projectType} setProjectType = {setProjectType} voyage = {voyage} setVoyage = {setVoyage} currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
         )
         case 2: 
         return (
@@ -36,6 +38,7 @@ export default function Odyssey({currentStage, setCurrentStage, companionText}) 
   return (
     <>
     {renderHome()}
+    <ProjectSection />
     </>
   )
 }

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { Navigate } from "react-router-dom";
-import "../css/VesselSelect.css";
+import "../css/vesselSelect.css";
+import ProjectSection from "../pages/ProjectSection";
 
 export default function VesselSelect({companion, voyage, setVoyage, setCurrentStage, companionText}) {
 
@@ -76,14 +77,14 @@ export default function VesselSelect({companion, voyage, setVoyage, setCurrentSt
               />
             </div>
 
-            <ul className="photo-grid">
+            <ul className="vessel-grid">
               
               <li>
                 <figure>
                   <button className = "img-button" onClick = {() => setVoyage("rocket-ship")}>
                   <img
-                    className="rounded-circle img-fluid bg-light"
-                    src="/images/rocketship.png"
+                    className="rounded-circle img-fluid"
+                    src="/images/big_rocketship.png"
                     height="300"
                     width="300"
                     alt="rocket-ship"
@@ -100,13 +101,12 @@ export default function VesselSelect({companion, voyage, setVoyage, setCurrentSt
                 <figure>
                   <button className = "img-button" onClick = {() => setVoyage("ship")}>
                   <img
-                    className="rounded-circle img-fluid bg-light"
-                    src="/images/ship.png"
+                    className="rounded-circle img-fluid "
+                    src="/images/big_ship.png"
                     height="300"
                     width="300"
                     alt="traditional-ship"
-                    value= "ship"
-                    onClick={() => setVoyage("ship")}
+                    // value= "ship" 
                   />
                   
 
@@ -120,13 +120,12 @@ export default function VesselSelect({companion, voyage, setVoyage, setCurrentSt
                 <figure>
                   <button className = "img-button" onClick = {() => setVoyage("airplane")}>
                   <img
-                    className="rounded-circle img-fluid bg-light"
-                    src="/images/airplane.png"
+                    className="rounded-circle img-fluid "
+                    src="/images/big_airplane.png"
                     height="300"
                     width="300"
                     alt="airplane"
-                    value = "airplane"
-                    // onClick={setVoyage("airplane")}
+                    // value = "airplane"
                   />
 
                   <figcaption>
@@ -138,7 +137,7 @@ export default function VesselSelect({companion, voyage, setVoyage, setCurrentSt
             </ul>
             
               
-                <div className="d-flex justify-content-center"> 
+                <div className="d-flex justify-content-center mt-5"> 
                   {renderButton()}
               
                 </div>
@@ -146,6 +145,7 @@ export default function VesselSelect({companion, voyage, setVoyage, setCurrentSt
            
           
         </section>
+        
       </div>
     </>
   );

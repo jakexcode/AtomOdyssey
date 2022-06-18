@@ -3,21 +3,21 @@ import { Navigate } from "react-router-dom";
 import "../css/vesselSelect.css";
 import ProjectSection from "../pages/ProjectSection";
 
-export default function VesselSelect({companion, voyage, setVoyage, setCurrentStage, companionText}) {
+export default function VesselSelect({companion, vessel, setVessel, setCurrentStage, companionText}) {
 
   
 
 
   const rocketBtn = () => {
-    setVoyage("rocket-ship")
+    setVessel("rocket-ship")
     setCurrentStage(1)
   }
   const shipBtn = () => {
-    setVoyage("ship")
+    setVessel("ship")
     setCurrentStage(1)
   }
   const airplaneBtn = () => {
-    setVoyage("airplane")
+    setVessel("airplane")
     setCurrentStage(1)
   }
   
@@ -25,7 +25,7 @@ export default function VesselSelect({companion, voyage, setVoyage, setCurrentSt
 
 
   const renderButton = () => {
-    switch(voyage) {
+    switch(vessel) {
       case "rocket-ship": 
       return (
         <button onClick = {rocketBtn} className="btn-companion mt-4 btn-lg">
@@ -81,7 +81,7 @@ export default function VesselSelect({companion, voyage, setVoyage, setCurrentSt
               
               <li>
                 <figure>
-                  <button className = "img-button" onClick = {() => setVoyage("rocket-ship")}>
+                  <button className = "img-button" onClick = {() => setVessel("rocket-ship")}>
                   <img
                     className="rounded-circle img-fluid"
                     src="/images/big_rocketship.png"
@@ -99,7 +99,7 @@ export default function VesselSelect({companion, voyage, setVoyage, setCurrentSt
               </li>
               <li>
                 <figure>
-                  <button className = "img-button" onClick = {() => setVoyage("ship")}>
+                  <button className = "img-button" onClick = {() => setVessel("ship")}>
                   <img
                     className="rounded-circle img-fluid "
                     src="/images/big_ship.png"
@@ -118,7 +118,7 @@ export default function VesselSelect({companion, voyage, setVoyage, setCurrentSt
               </li>
               <li>
                 <figure>
-                  <button className = "img-button" onClick = {() => setVoyage("airplane")}>
+                  <button className = "img-button" onClick = {() => setVessel("airplane")}>
                   <img
                     className="rounded-circle img-fluid "
                     src="/images/big_airplane.png"

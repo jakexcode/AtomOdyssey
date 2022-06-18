@@ -1,31 +1,23 @@
 import React, {useState} from "react";
 import "../css/projectSelect.css"
 import ProjectSection from "../pages/ProjectSection";
+import BackendFunction from "./BackendFunction";
+import FrontendFunction from "./FrontendFunction";
+import FullstackFunction from "./FullstackFunction";
 
 export default function ProjectSelect({
   companionText,
   currentStage,
   setCurrentStage,
-  voyage,
-  setVoyage,
+  vessel,
+  setVessel,
   projectType,
   setProjectType
 }) {
 
   const [selectedProject, setSelectedProject] = useState(false);
 
-  const backendBtnNext = () => {
-    setProjectType("backend")
-    setCurrentStage(2)
-  }
-  const frontendBtnNext = () => {
-    setProjectType("frontend")
-    setCurrentStage(2)
-  }
-  const fullstackBtnNext = () => {
-    setProjectType("fullstack")
-    setCurrentStage(2)
-  }
+  
 
 
   const backendBtn = () => {
@@ -50,66 +42,24 @@ export default function ProjectSelect({
   const renderProjectTypeButton = () => {
     switch (projectType) {
       case "backend":
-        return (
-          <button onClick = {backendBtnNext} className="btn-companion mt-4 btn-lg">
-                  Let's Talk About BackEnd
-                </button>
-        );
-      // case "backend" && "ship":
-      //   return (
-      //     <button onClick = {backendBtn} className="btn-companion mt-4 btn-lg">
-      //             Let's Talk About These Winds and Currents
-      //           </button>
-      //   );
-      // case "backend" && "airplane":
-      //   return (
-      //     <button onClick = {backendBtn} className="btn-companion mt-4 btn-lg">
-      //             Let's Talk About These Jet Engines
-      //           </button>
-      //   );
+       return (
+        <BackendFunction  setProjectType = {setProjectType} vessel = {vessel} currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
+       ) 
       case "frontend":
         return (
-          <button onClick = {frontendBtnNext} className="btn-companion mt-4 btn-lg">
-          Let's Talk About FrontEnd
-        </button>
-        );
-      // case ("frontend" && "ship"):
-      //   return (
-      //     <button onClick = {frontendBtn} className="btn-companion mt-4 btn-lg">
-      //     Let's Line Her Up With The Stars
-      //   </button>
-      //   );
-      // case ("frontend" && "airplane"):
-      //   return (
-      //     <button onClick = {frontendBtn} className="btn-companion mt-4 btn-lg">
-      //     Let's Talk About The Pilot's Quarters
-      //   </button>
-      //   );
+        <FrontendFunction  setProjectType = {setProjectType} vessel = {vessel}  currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
+        )
       case "fullstack":
         return (
-          <button onClick = {fullstackBtnNext} className="btn-companion mt-4 btn-lg">
-          Let's Talk About Both BackEnd and FrontEnd
-        </button>
-        );
-      // case ("fullstack" && "ship"):
-      //   return (
-      //     <button onClick = {fullstackBtn} className="btn-companion mt-4 btn-lg">
-      //     Let's Talk About The Odyssey 
-      //   </button>
-      //   );
-      // case ("fullstack" && "airplane"):
-      //   return (
-      //     <button onClick = {fullstackBtn} className="btn-companion mt-4 btn-lg">
-      //     Let's Talk About The Flight Plan
-      //   </button>
-      //   );
+          <FullstackFunction  setProjectType = {setProjectType} vessel = {vessel}  currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
+        )
       default:
         return [];
     }
   };
 
   const renderVoyage = () => {
-    switch (voyage) {
+    switch (vessel) {
       case "rocket-ship":
         return (
           <img
@@ -173,7 +123,7 @@ export default function ProjectSelect({
                 alt="avatar"
               />
             </div>
-            <div className="voyage-icon">
+            <div className="vessel-icon">
             {renderVoyage()}
             </div>
             </div>

@@ -8,7 +8,7 @@ import ProjectSection from './ProjectSection'
 
 export default function Odyssey({currentStage, setCurrentStage, companionText}) {
 
-  const [voyage, setVoyage] = useState("")
+  const [vessel, setVessel] = useState("")
   const [projectType, setProjectType] = useState("");
 
   
@@ -23,15 +23,15 @@ export default function Odyssey({currentStage, setCurrentStage, companionText}) 
     switch(currentStage) {
       case 0: 
         return (
-          <VesselSelect companionText={companionText} voyage = {voyage} setVoyage = {setVoyage} currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
+          <VesselSelect companionText={companionText} vessel = {vessel} setVessel = {setVessel} currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
         )
         case 1: 
         return (
-          <ProjectSelect projectType = {projectType} setProjectType = {setProjectType} voyage = {voyage} setVoyage = {setVoyage} currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
+          <ProjectSelect projectType = {projectType} setProjectType = {setProjectType} vessel = {vessel} setVessel = {setVessel} currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
         )
         case 2: 
         return (
-          <Consultation voyage = {voyage} setVoyage = {setVoyage} currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
+          <Consultation vessel = {vessel} setVessel = {setVessel} currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
         )
     }
   }

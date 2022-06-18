@@ -145,7 +145,7 @@ export default function VesselSelect({companion, voyage, setVoyage, setCurrentSt
            
           
         </section>
-        
+        <ProjectSection />
       </div>
     </>
   );

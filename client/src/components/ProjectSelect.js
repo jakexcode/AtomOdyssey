@@ -242,7 +242,7 @@ export default function ProjectSelect({
                 </div>
          
         </section>
-       
+      <ProjectSection /> 
       </div>
     </>
   );

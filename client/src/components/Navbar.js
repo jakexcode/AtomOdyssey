@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom"
-import "../css/navbar.css"
+import "../css/main_navbar.css"
 
 export default function Navbar({home, setCurrentStage}) {
 

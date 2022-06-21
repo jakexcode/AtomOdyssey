@@ -67,7 +67,7 @@ export default function VesselSelect({companion, vessel, setVessel, setCurrentSt
             Choose Your <span className="special-text">Vessel</span>
           </h5>
           
-            <div className="d-flex justify-content-center robot-position">
+            <div className="d-flex justify-content-center vessel-robot-position">
               <img
                 className="rounded-circle img-fluid bg-light"
                 src={`https://robohash.org/${companionText}`}

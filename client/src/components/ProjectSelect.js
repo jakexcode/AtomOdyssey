@@ -7,6 +7,7 @@ import FullstackFunction from "./FullstackFunction";
 
 export default function ProjectSelect({
   companionText,
+  companion,
   currentStage,
   setCurrentStage,
   vessel,

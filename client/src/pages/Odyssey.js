@@ -3,7 +3,6 @@ import CompanionSelect from '../components/CompanionSelect'
 import VesselSelect from '../components/VesselSelect'
 import Consultation from '../components/Consultation'
 import ProjectSelect from '../components/ProjectSelect'
-import ProjectSection from './ProjectSection'
 
 
 export default function Odyssey({currentStage, setCurrentStage, companionText}) {
@@ -27,11 +26,11 @@ export default function Odyssey({currentStage, setCurrentStage, companionText}) 
         )
         case 1: 
         return (
-          <ProjectSelect projectType = {projectType} setProjectType = {setProjectType} vessel = {vessel} setVessel = {setVessel} currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
+          <ProjectSelect companionText = {companionText} projectType = {projectType} setProjectType = {setProjectType} vessel = {vessel} setVessel = {setVessel} currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
         )
         case 2: 
         return (
-          <Consultation vessel = {vessel} setVessel = {setVessel} currentStage = {currentStage} setCurrentStage = {setCurrentStage} />
+          <Consultation vessel = {vessel} setVessel = {setVessel} currentStage = {currentStage} setCurrentStage = {setCurrentStage} companionText = {companionText} />
         )
     }
   }

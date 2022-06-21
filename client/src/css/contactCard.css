@@ -1,0 +1,17 @@
+.form-text {
+    color: #619B8A !important;
+    font-weight: bold !important;
+    letter-spacing: 3px;
+    
+}
+.form-header-text {
+    color: #FC9E4F !important;
+    font-weight: bold !important;
+    letter-spacing: 3px;
+    
+}
+
+.contact-card {
+    background-color: #020122;
+    border-radius: 5%;
+}

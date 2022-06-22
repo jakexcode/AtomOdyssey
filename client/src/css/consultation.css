@@ -13,7 +13,7 @@
 
 .consult-home-banner {
     color: #C4C4C4;
-    padding-left: 145px;
+    margin-left: 145px;
     letter-spacing: 5px;
     
 }
@@ -26,8 +26,26 @@
     color:#FC9E4F;
 }
 
-.robot-position {
-    padding-left: 1100px;
+/* .form-text {
+    color: #619B8A !important;
+    font-weight: bold !important;
+    letter-spacing: 3px;
+    
+}
+.form-header-text {
+    color: #FC9E4F !important;
+    font-weight: bold !important;
+    letter-spacing: 3px;
+    
+}
+
+.consult-card {
+    background-color: #020122;
+    border-radius: 5%;
+} */
+
+.consult-robot-position {
+    padding-left: 400px;
   }
 
 .consult-home-consult {
@@ -44,8 +62,11 @@
 
 }
 
+
 .consult-select-container {
     padding-top: 50px;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .btn-companion { 

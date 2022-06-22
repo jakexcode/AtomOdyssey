@@ -43,13 +43,18 @@
 
 }
 
+html {
+	background-color: #040228;
+}
+
 .companion-select-container {
     padding-top: 50px;
 }
 
 .btn-companion { 
     background-color: #619B8A;
-   
+    height: 100px;
+    width: 250px;
     border: none;
     border-radius: 4px;
     color: white;
@@ -59,11 +64,13 @@
     background-color:#2c6e5a
   }
 
-  .robot-position {
-    padding-left: 1200px;
+  .vessel-robot-position {
+    padding-left: 600px;
+	padding-bottom: 75px;
   }
 
   .vessel-grid {
+	
 	margin: 1em auto;
 	max-width: 1106px;
 	text-align: center;
@@ -78,12 +85,14 @@
 }
 
 .vessel-grid img {
+	
 	display: block;
 	height: auto;
 	max-width: 100%;
 }
 
 .vessel-grid figure {
+	
 	height: 300px;
     border-radius: 50%;
 	overflow: hidden;
@@ -92,6 +101,7 @@
 }
 
 .vessel-grid figcaption {
+	
 	background: rgba(0,0,0,0.8);
 	color: #ffffff;
 	display: table;

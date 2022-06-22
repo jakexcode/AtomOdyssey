@@ -7,6 +7,7 @@ import FullstackFunction from "./FullstackFunction";
 
 export default function ProjectSelect({
   companionText,
+  companion,
   currentStage,
   setCurrentStage,
   vessel,
@@ -128,6 +129,11 @@ export default function ProjectSelect({
             </div>
             </div>
 
+            <div className="d-flex justify-content-center mt-5"> 
+                  {renderProjectTypeButton()}
+              
+                </div>
+
             <ul className="project-grid mt-5">
               
               <li>
@@ -186,10 +192,7 @@ export default function ProjectSelect({
                 </figure>
               </li>
             </ul>
-            <div className="d-flex justify-content-center mt-5"> 
-                  {renderProjectTypeButton()}
-              
-                </div>
+            
          
         </section>
       <ProjectSection /> 

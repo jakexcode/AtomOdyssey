@@ -27,11 +27,12 @@ require("dotenv").config();
   app.use(express.json());
 
   app.post("http://localhost:3000/odyssey/email", async(req,res) => {
+    
 
     const updateEmail = await dataStore 
       .collection("emails")
       .get();
-
+      console.log(req)
     try {
       const mailOptions = {
         from: req.body.email,

@@ -9,4 +9,12 @@ var transporter = nodemailer.createTransport({
   }
 });
 
+transporter.verify((error) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Ready to Send");
+  }
+});
+
 module.exports = transporter;

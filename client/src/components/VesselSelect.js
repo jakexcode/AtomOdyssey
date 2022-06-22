@@ -77,6 +77,10 @@ export default function VesselSelect({companion, vessel, setVessel, setCurrentSt
               />
             </div>
 
+            <div className="d-flex justify-content-center mt-5"> 
+                  {renderButton()}
+              
+                </div>
             <ul className="vessel-grid">
               
               <li>
@@ -137,10 +141,7 @@ export default function VesselSelect({companion, vessel, setVessel, setCurrentSt
             </ul>
             
               
-                <div className="d-flex justify-content-center mt-5"> 
-                  {renderButton()}
-              
-                </div>
+                
               
            
           

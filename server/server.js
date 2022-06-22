@@ -2,10 +2,8 @@
 const express = require("express");
 const path = require("path");
 const nodemailer = require('nodemailer')
-const cors = require('cors')({
-  origin: true
-})
-
+const router = express.Router();
+const cors = require("cors");
 // GraphQL imports
 const { createServer } = require('https');
 const { dataStore } = require("./config/connection");
@@ -14,6 +12,9 @@ const { dataStore } = require("./config/connection");
 
 // Configuration variables
 const app = express();
+app.use(cors());
+app.use(express.json());
+app.use("/", router);
 const PORT = process.env.PORT || 3001;
 // const schema = makeExecutableSchema({ typeDefs, resolvers });
 const httpServer = createServer(app);
@@ -26,13 +27,16 @@ require("dotenv").config();
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
 
-  app.post("http://localhost:3000/odyssey/email", async(req,res) => {
+  router.post("/contact", (req,res) => {
     
-
-    const updateEmail = await dataStore 
+    const updateEmail = async() => {
+    
+    const emailRef = await dataStore 
       .collection("emails")
       .get();
       console.log(req)
+
+      if (!emailRef.empty) {
     try {
       const mailOptions = {
         from: req.body.email,
@@ -48,12 +52,14 @@ require("dotenv").config();
         res.status(200).send({
           isEmailSend: true
         })
-        return updateEmail(mailOptions)
+        return 
       })
     }
     catch(err) {
       console.log(error)
     }
+  }
+}
   })
   
   

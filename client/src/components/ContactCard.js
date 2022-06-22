@@ -6,6 +6,7 @@ import "../css/contactCard.css"
 export default function ContactCard() {
 
   const [formData, setFormData] = useState({});
+  const [status, setStatus] = useState("Submit")
 
 
   const updateInput = (e) => {
@@ -21,6 +22,7 @@ export default function ContactCard() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setStatus("Sending...")
     sendEmail();
     setFormData({
       name: "",
@@ -28,13 +30,19 @@ export default function ContactCard() {
       message: "",
     });
   };
-  const sendEmail = () => {
-    axios
-      .post(
-        "/email",
+  const sendEmail = async() => {
+    try {
+   const response = await axios.post(
+        "http://localhost:3000/odyssey/contact",
        formData
       )
-      
+      console.log(response)
+      setStatus("Submit")
+      let result = await response.json()
+   }catch (err) {
+    console.log(err);
+    setStatus("Submit")
+   }
   };
   return (
     <div className="contact-card col-6">
@@ -84,7 +92,7 @@ export default function ContactCard() {
           </div>
           <div className="col-sm-2 ms-auto d-grid my-2">
             <button type="submit" className="btn btn-primary">
-              Submit
+              {status}
             </button>
           </div>
         </form>

@@ -12,7 +12,7 @@ require("dotenv").config();
 //   measurementId: process.env.APP_MEASUREMENT_ID
 // };
 
-
+// console.log(process.env)
 const serviceAccount = {
   type: process.env.type,
   project_id: process.env.project_id,

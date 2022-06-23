@@ -1,9 +1,13 @@
 import React, {useState} from "react";
 import axios from "axios";
+import { CONTACT_FORM } from "../utils/mutations";
 import "../css/contactCard.css"
+import { useMutation } from "@apollo/client";
 
 
 export default function ContactCard() {
+
+  const [contactForm] = useMutation(CONTACT_FORM)
 
   const [formData, setFormData] = useState({});
   const [status, setStatus] = useState("Submit")
@@ -30,15 +34,13 @@ export default function ContactCard() {
       message: "",
     });
   };
+
+
   const sendEmail = async() => {
     try {
-   const response = await axios.post(
-        "http://localhost:3000/odyssey/contact",
-       formData
-      )
+   const response = await contactForm({variables: {...formData}})
       console.log(response)
       setStatus("Submit")
-      let result = await response.json()
    }catch (err) {
     console.log(err);
     setStatus("Submit")

@@ -5,52 +5,127 @@ import ProjectSection from "../pages/ProjectSection";
 
 export default function VesselSelect({companion, vessel, setVessel, setCurrentStage, companionText}) {
 
+  const [vesselClass, setVesselClass] = useState("")
+
+  let delay = 5
   
 
 
   const rocketBtn = () => {
     setVessel("rocket-ship")
-    setCurrentStage(1)
+    setVesselClass("rocket-ship")
+    setInterval(function () {
+      delay--;
+      if (delay == 0) {
+        setCurrentStage(1)
+      }
+    }, 1000)
   }
   const shipBtn = () => {
     setVessel("ship")
-    setCurrentStage(1)
+    setVesselClass("ship")
+    setInterval(function () {
+      delay--;
+      if (delay == 0) {
+        setCurrentStage(1)
+      }
+    }, 1000)
   }
   const airplaneBtn = () => {
     setVessel("airplane")
-    setCurrentStage(1)
-  }
-  
-
-
-
-  const renderButton = () => {
-    switch(vessel) {
-      case "rocket-ship": 
-      return (
-        <button onClick = {rocketBtn} className="btn-companion mt-4 btn-lg">
-                  Blast Off
-                </button>
-      )
-      case "ship": 
-      return (
-        <button onClick = {shipBtn} className="btn-companion mt-4 btn-lg">
-                  Bon Voyage
-                </button>
-      )
-      case "airplane": 
-      return (
-        <button onClick = {airplaneBtn} className="btn-companion mt-4 btn-lg">
-                  Take Off
-                </button>
-      )
-      default:
-        return []
-    }
+    setVesselClass("airplane")
+    setInterval(function () {
+      delay--;
+      if (delay == 0) {
+        setCurrentStage(1)
+      }
+    }, 1000)
   }
 
-  return (
-    <>
+
+  const renderPage = () => {
+    switch (vesselClass) {
+      case "rocket-ship":
+        return (
+          <div className="companion-home-background">
+            <div className="d-flex justify-content-center vessel-robot-position">
+              <img
+                className="rounded-circle img-fluid bg-light"
+                src={`https://robohash.org/${companionText}`}
+                height="150"
+                width="150"
+                alt="avatar"
+              />
+            </div>
+            <div className="d-flex justify-content-center">
+            <div className = "animated-rocket shake">
+              <img
+                    className="rounded-circle img-fluid"
+                    src="/images/big_rocketship.png"
+                    height="500"
+                    width="500"
+                    alt="rocket-ship"
+                    // value = "rocket-ship"
+                  />
+            </div>
+            </div>
+          </div>
+        )
+        case "ship": 
+        return (
+          <div className="companion-home-background">
+            <div className="d-flex justify-content-center vessel-robot-position">
+              <img
+                className="rounded-circle img-fluid bg-light"
+                src={`https://robohash.org/${companionText}`}
+                height="150"
+                width="150"
+                alt="avatar"
+              />
+            </div>
+            <div className="d-flex justify-content-center">
+            <div className = "animated-rocket shake">
+              <img
+                    className="rounded-circle img-fluid"
+                    src="/images/big_ship.png"
+                    height="500"
+                    width="500"
+                    alt="rocket-ship"
+                    // value = "rocket-ship"
+                  />
+            </div>
+            </div>
+          </div>
+        )
+        case "airplane": 
+        return (
+          <div className="companion-home-background">
+            <div className="d-flex justify-content-center vessel-robot-position">
+              <img
+                className="rounded-circle img-fluid bg-light"
+                src={`https://robohash.org/${companionText}`}
+                height="150"
+                width="150"
+                alt="avatar"
+              />
+            </div>
+            <div className="d-flex justify-content-center">
+            <div className = "animated-rocket shake">
+              <img
+                    className="rounded-circle img-fluid"
+                    src="/images/big_airplane.png"
+                    height="500"
+                    width="500"
+                    alt="rocket-ship"
+                    // value = "rocket-ship"
+                  />
+            </div>
+            </div>
+          </div>
+        )
+         default:
+        return (
+          <>
       <div className="companion-home-background">
         <div className="jumbo">
           <div className="move-banner"></div>
@@ -78,14 +153,14 @@ export default function VesselSelect({companion, vessel, setVessel, setCurrentSt
             </div>
 
             <div className="d-flex justify-content-center mt-5"> 
-                  {renderButton()}
+                  {/* {renderButton()} */}
               
                 </div>
             <ul className="vessel-grid">
               
               <li>
                 <figure>
-                  <button className = "img-button" onClick = {() => setVessel("rocket-ship")}>
+                  <button className = "img-button" onClick = {rocketBtn}>
                   <img
                     className="rounded-circle img-fluid"
                     src="/images/big_rocketship.png"
@@ -103,7 +178,7 @@ export default function VesselSelect({companion, vessel, setVessel, setCurrentSt
               </li>
               <li>
                 <figure>
-                  <button className = "img-button" onClick = {() => setVessel("ship")}>
+                  <button className = "img-button" onClick = {shipBtn}>
                   <img
                     className="rounded-circle img-fluid "
                     src="/images/big_ship.png"
@@ -122,7 +197,7 @@ export default function VesselSelect({companion, vessel, setVessel, setCurrentSt
               </li>
               <li>
                 <figure>
-                  <button className = "img-button" onClick = {() => setVessel("airplane")}>
+                  <button className = "img-button" onClick = {airplaneBtn}>
                   <img
                     className="rounded-circle img-fluid "
                     src="/images/big_airplane.png"
@@ -139,15 +214,45 @@ export default function VesselSelect({companion, vessel, setVessel, setCurrentSt
                 </figure>
               </li>
             </ul>
-            
-              
-                
-              
-           
-          
         </section>
         <ProjectSection />
       </div>
     </>
-  );
+        )
+    }
+  }
+
+  
+
+
+
+  // const renderButton = () => {
+  //   switch(vessel) {
+  //     case "rocket-ship": 
+  //     return (
+  //       <button onClick = {rocketBtn} className="btn-companion mt-4 btn-lg">
+  //                 Blast Off
+  //               </button>
+  //     )
+  //     case "ship": 
+  //     return (
+  //       <button onClick = {shipBtn} className="btn-companion mt-4 btn-lg">
+  //                 Bon Voyage
+  //               </button>
+  //     )
+  //     case "airplane": 
+  //     return (
+  //       <button onClick = {airplaneBtn} className="btn-companion mt-4 btn-lg">
+  //                 Take Off
+  //               </button>
+  //     )
+  //     default:
+  //       return []
+  //   }
+  // }
+
+  return (
+    renderPage()
+  )
+
 }

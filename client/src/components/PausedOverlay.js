@@ -2,8 +2,7 @@ import { css } from "@emotion/css";
 
 const PausedOverlay = () => (
   <div>
-    <img
-      src="/images/createLabel.png"
+    <img 
       alt=""
       className={css`
         /* Thumbnail image expands to cover the player */

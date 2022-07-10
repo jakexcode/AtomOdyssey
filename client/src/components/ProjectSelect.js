@@ -64,7 +64,7 @@ export default function ProjectSelect({
       case "rocket-ship":
         return (
           <img
-            className="rounded-circle "
+            className="img-fluid rounded-circle "
             src="/images/big_rocketship.png"
             height="150"
             width="150"
@@ -74,7 +74,7 @@ export default function ProjectSelect({
       case "ship":
         return (
           <img
-            className="rounded-circle"
+            className="img-fluid rounded-circle"
             src="/images/big_ship.png"
             height="150"
             width="150"
@@ -84,7 +84,7 @@ export default function ProjectSelect({
       case "airplane":
         return (
           <img
-            className="rounded-circle"
+            className="img-fluid rounded-circle"
             src="/images/big_airplane.png"
             height="150"
             width="150"

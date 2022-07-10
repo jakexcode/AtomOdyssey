@@ -1,4 +1,4 @@
-.consult-home-background {
+.contact-home-background {
     background-color: #040228;
     width: 100vw;
     height: 100vw;
@@ -11,8 +11,9 @@
     letter-spacing: 5px;
 }
 
-.consult-home-banner {
-    color: #C4C4C4;  
+.contact-home-banner {
+    color: #C4C4C4;
+   
     letter-spacing: 5px;
     
 }
@@ -43,9 +44,9 @@
     border-radius: 5%;
 } */
 
-/* .consult-robot-position {
-    padding-left: 300px;
-  } */
+.consult-robot-position {
+    padding-left: 400px;
+  }
 
 .consult-home-consult {
     color: #619B8A;
@@ -68,6 +69,16 @@
     justify-content: center; */
 }
 
-
+.btn-companion { 
+    background-color: #619B8A;
+   
+    border: none;
+    border-radius: 4px;
+    color: white;
+  }
+  
+  .btn-companion:hover {
+    background-color:#2c6e5a
+  }
 
   

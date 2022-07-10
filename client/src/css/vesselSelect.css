@@ -16,7 +16,7 @@
 
 .companion-home-banner {
     color: #C4C4C4;
-    padding-left: 145px;
+
     letter-spacing: 5px;
     
 }
@@ -190,5 +190,12 @@ html {
     border-radius: 50%;
 }
 
+@media screen and (min-width: 900px) {
+    .companion-home-banner {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+  }
 
   

@@ -54,8 +54,8 @@ export default function VesselSelect({companion, vessel, setVessel, setCurrentSt
       <div className="companion-home-background">
         <div className="jumbo">
           <div className="move-banner"></div>
-          <h1 className="companion-home-banner mb-5 ms-5 display-1">
-            Designing a Website is an
+          <h1 className="companion-home-banner mb-5 display-1">
+            Designing a Website 
           </h1>
           <h1 className="companion-home-odyssey text-center">Odyssey</h1>
         </div>

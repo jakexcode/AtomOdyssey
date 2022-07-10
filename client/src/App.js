@@ -15,6 +15,7 @@ import Consultation from "./components/Consultation"
 import ProjectSection from "./pages/ProjectSection";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
+import ContactMe from "./components/ContactMe";
 
 const client= new ApolloClient({uri: "/graphql", cache: new InMemoryCache()})
 
@@ -37,6 +38,7 @@ function App() {
        element = {<CompanionSelect companionText ={companionText} setCompanionText = {setCompanionText} setCurrentStage = {setCurrentStage} companion = {companion} setCompanion = {setCompanion} /> }/>
         <Route path = "/odyssey"
         element = {<Odyssey companion = {companion} setCompanion = {setCompanion} companionText = {companionText} currentStage = {currentStage} setCurrentStage = {setCurrentStage}/>} />
+        <Route path = "/contact" element = {<ContactMe />} />
       </Routes>
       </Router>
       </ApolloProvider>

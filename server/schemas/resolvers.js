@@ -28,7 +28,7 @@ const resolvers = {
       var mailOptions = {
         from: email,
         to: process.env.EMAIL_USERNAME,
-        subject: `${name} has requested a consultation!`,
+        subject: `${name} has requested a consultation from ${email}!`,
         html: `
           ${message}
         `

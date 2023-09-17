@@ -58,8 +58,8 @@ export default function CompanionSelect({companion, setCompanion, currentStage, 
                       <img
                       className="rounded-circle img-fluid bg-light"
                       src= {`https://robohash.org/${companionText}`}
-                      height="150"
-                      width="150"
+                      height="300"
+                      width="300"
                       alt="avatar"
                     />
                   </div>
